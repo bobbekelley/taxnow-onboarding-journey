@@ -18,10 +18,11 @@ const FloatingShape = ({ className }: { className: string }) => (
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-violet-50 via-white to-purple-50">
       {/* Floating Shapes */}
       <FloatingShape className="w-64 h-64 bg-primary/10 rounded-full -top-20 -left-20 blur-3xl" />
-      <FloatingShape className="w-96 h-96 bg-emerald-100 rounded-full -bottom-32 -right-32 blur-3xl" />
+      <FloatingShape className="w-96 h-96 bg-purple-100 rounded-full -bottom-32 -right-32 blur-3xl" />
+      <FloatingShape className="w-48 h-48 bg-violet-100 rounded-full top-1/2 right-0 blur-2xl" />
       
       {/* Main Content */}
       <div className="container max-w-6xl mx-auto px-4 py-16 relative">
@@ -32,56 +33,43 @@ const Index = () => {
           className="text-center space-y-8"
         >
           <span className="inline-flex items-center rounded-full px-4 py-1 text-sm font-medium bg-primary/10 text-primary">
-            Welcome to TaxNow
+            Powered by TaxNow
           </span>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 tracking-tight">
-            Simplify Your Tax Filing Journey
+            Connect Your Tax Data
           </h1>
           
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Experience a smarter way to handle your taxes with our intelligent, guided process.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Don't have your tax information laying around or have no idea how to get your hands on it? Let us handle all that for you!
           </p>
+
+          {/* Security Badge */}
+          <div className="flex items-center justify-center gap-2 text-sm text-gray-500">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            <span>Bank-level security & 256-bit encryption</span>
+          </div>
 
           <motion.div
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="inline-block"
           >
-            <button className="px-8 py-4 bg-primary text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300">
-              Start Your Journey
+            <button className="px-8 py-4 bg-gradient-to-r from-primary to-violet-500 text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300">
+              Connect Your Accounts
             </button>
           </motion.div>
 
-          {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
-            {[
-              {
-                title: "Smart Filing",
-                description: "AI-powered tax form completion",
-              },
-              {
-                title: "Real-time Support",
-                description: "Expert assistance when you need it",
-              },
-              {
-                title: "Maximum Returns",
-                description: "Optimize your tax returns automatically",
-              },
-            ].map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 * index }}
-                className="glass-card rounded-2xl p-6 text-left"
-              >
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
-            ))}
+          {/* Trusted By Section */}
+          <div className="mt-16 pt-8 border-t border-gray-100">
+            <p className="text-sm text-gray-500 mb-4">Trusted by users from</p>
+            <div className="flex justify-center items-center gap-8 opacity-50">
+              <img src="https://placehold.co/100x40" alt="Company logo" className="h-8 object-contain" />
+              <img src="https://placehold.co/100x40" alt="Company logo" className="h-8 object-contain" />
+              <img src="https://placehold.co/100x40" alt="Company logo" className="h-8 object-contain" />
+            </div>
           </div>
         </motion.div>
       </div>
