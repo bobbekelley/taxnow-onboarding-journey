@@ -27,7 +27,7 @@ const Success = () => {
       return Math.random() * (max - min) + min;
     };
 
-    const interval: NodeJS.Timer = setInterval(() => {
+    const interval = window.setInterval(() => {
       const timeLeft = animationEnd - Date.now();
 
       if (timeLeft <= 0) {
@@ -52,7 +52,7 @@ const Success = () => {
       });
     }, 250);
 
-    return () => clearInterval(interval);
+    return () => window.clearInterval(interval);
   }, []);
 
   return (
