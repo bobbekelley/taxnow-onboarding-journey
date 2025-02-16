@@ -90,13 +90,13 @@ const Index = () => {
           </motion.div>
 
           {/* Trusted By Section */}
-          <motion.div className="mt-16 pt-8 border-t border-gray-100" initial={{
+          <motion.div initial={{
           opacity: 0
         }} animate={{
           opacity: 1
         }} transition={{
           delay: 0.8
-        }}>
+        }} className="mt-16 pt-8 border-t border-gray-100 py-[3px] my-[10px]">
             <p className="text-sm text-gray-500 mb-4">Trusted by 1,000s of Taxpayers</p>
             <div className="flex justify-center items-center gap-4">
               <svg className="w-48 h-12 text-gray-400/50" viewBox="0 0 200 50" fill="currentColor">
