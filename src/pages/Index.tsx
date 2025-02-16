@@ -1,5 +1,6 @@
 
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const FloatingShape = ({
   className
@@ -16,6 +17,11 @@ const FloatingShape = ({
 
 const Index = () => {
   const Company = "LendingClub";
+  const navigate = useNavigate();
+
+  const handleConnect = () => {
+    navigate('/success');
+  };
 
   return <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-violet-100 via-purple-50 to-pink-50">
       {/* Floating Shapes */}
@@ -80,7 +86,10 @@ const Index = () => {
             whileTap={{ scale: 0.98 }}
             className="inline-block"
           >
-            <button className="px-8 py-4 bg-gradient-to-r from-primary via-violet-500 to-fuchsia-500 text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 border border-white/20">
+            <button 
+              onClick={handleConnect}
+              className="px-8 py-4 bg-gradient-to-r from-primary via-violet-500 to-fuchsia-500 text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 border border-white/20"
+            >
               Connect Your Account
             </button>
           </motion.div>
