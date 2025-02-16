@@ -1,6 +1,4 @@
-
 import { motion } from "framer-motion";
-
 const FloatingShape = ({
   className
 }: {
@@ -13,10 +11,9 @@ const FloatingShape = ({
   repeat: Infinity,
   ease: "easeInOut"
 }} />;
-
 const Index = () => {
   const Company = "TaxNow"; // Define the Company variable here
-  
+
   return <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-violet-50 via-purple-50 to-purple-50">
       {/* Floating Shapes */}
       <FloatingShape className="w-64 h-64 bg-primary/10 rounded-full -top-20 -left-20 blur-3xl" />
@@ -60,9 +57,7 @@ Let us handle all that for you!
         }} whileTap={{
           scale: 0.98
         }} className="inline-block">
-            <button className="px-8 py-4 bg-gradient-to-r from-primary to-violet-500 text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300">
-              Connect
-            </button>
+            <button className="px-8 py-4 bg-gradient-to-r from-primary to-violet-500 text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300">Connect Your Account</button>
           </motion.div>
 
           {/* Trusted By Section */}
@@ -84,5 +79,4 @@ Let us handle all that for you!
       </div>
     </div>;
 };
-
 export default Index;
