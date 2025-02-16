@@ -18,7 +18,7 @@ const FloatingShape = ({ className }: { className: string }) => (
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-violet-50 via-white to-purple-50">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-violet-50 via-purple-50 to-purple-50">
       {/* Floating Shapes */}
       <FloatingShape className="w-64 h-64 bg-primary/10 rounded-full -top-20 -left-20 blur-3xl" />
       <FloatingShape className="w-96 h-96 bg-purple-100 rounded-full -bottom-32 -right-32 blur-3xl" />
@@ -37,10 +37,10 @@ const Index = () => {
           </span>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 tracking-tight">
-            Connect Your Tax Data
+            Connect to [Company]
           </h1>
           
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-xl mx-auto leading-relaxed">
             Don't have your tax information laying around or have no idea how to get your hands on it? Let us handle all that for you!
           </p>
 
@@ -49,7 +49,7 @@ const Index = () => {
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
-            <span>Bank-level security & 256-bit encryption</span>
+            <span>Enterprise level security & encryption</span>
           </div>
 
           <motion.div
@@ -58,17 +58,23 @@ const Index = () => {
             className="inline-block"
           >
             <button className="px-8 py-4 bg-gradient-to-r from-primary to-violet-500 text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300">
-              Connect Your Accounts
+              Connect
             </button>
           </motion.div>
 
           {/* Trusted By Section */}
           <div className="mt-16 pt-8 border-t border-gray-100">
-            <p className="text-sm text-gray-500 mb-4">Trusted by users from</p>
-            <div className="flex justify-center items-center gap-8 opacity-50">
-              <img src="https://placehold.co/100x40" alt="Company logo" className="h-8 object-contain" />
-              <img src="https://placehold.co/100x40" alt="Company logo" className="h-8 object-contain" />
-              <img src="https://placehold.co/100x40" alt="Company logo" className="h-8 object-contain" />
+            <p className="text-sm text-gray-500 mb-4">Trusted by 1,000s</p>
+            <div className="flex justify-center items-center gap-4">
+              <svg className="w-48 h-12 text-gray-400/50" viewBox="0 0 200 50" fill="currentColor">
+                <circle cx="25" cy="25" r="8" />
+                <circle cx="50" cy="25" r="8" />
+                <circle cx="75" cy="25" r="8" />
+                <circle cx="100" cy="25" r="8" />
+                <circle cx="125" cy="25" r="8" />
+                <circle cx="150" cy="25" r="8" />
+                <circle cx="175" cy="25" r="8" />
+              </svg>
             </div>
           </div>
         </motion.div>
