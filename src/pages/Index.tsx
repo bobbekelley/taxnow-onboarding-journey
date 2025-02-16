@@ -62,7 +62,7 @@ Let us handle all that for you!
 
           {/* Trusted By Section */}
           <div className="mt-16 pt-8 border-t border-gray-100">
-            <p className="text-sm text-gray-500 mb-4">Trusted by 1,000s</p>
+            <p className="text-sm text-gray-500 mb-4">Trusted by 1,000s of Taxpayers</p>
             <div className="flex justify-center items-center gap-4">
               <svg className="w-48 h-12 text-gray-400/50" viewBox="0 0 200 50" fill="currentColor">
                 <circle cx="25" cy="25" r="8" />
