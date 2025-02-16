@@ -1,4 +1,6 @@
+
 import { motion } from "framer-motion";
+
 const FloatingShape = ({
   className
 }: {
@@ -11,8 +13,10 @@ const FloatingShape = ({
   repeat: Infinity,
   ease: "easeInOut"
 }} />;
+
 const Index = () => {
-  const Company = "TaxNow";
+  const Company = "LendingClub";
+
   return <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-violet-100 via-purple-50 to-pink-50">
       {/* Floating Shapes */}
       <FloatingShape className="w-72 h-72 bg-blue-100 rounded-full -top-20 -left-20 blur-3xl" />
@@ -31,72 +35,64 @@ const Index = () => {
       }} transition={{
         duration: 0.8
       }} className="text-center space-y-8">
-          <motion.span className="inline-flex items-center rounded-full px-6 py-2 font-medium bg-gradient-to-r from-primary/20 to-violet-300/20 text-primary text-lg border border-primary/10 backdrop-blur-sm" whileHover={{
-          scale: 1.02
-        }} whileTap={{
-          scale: 0.98
-        }}>
-            Powered by TaxNow
+          <motion.span 
+            className="inline-flex items-center rounded-full px-6 py-2 font-medium bg-gradient-to-r from-primary/20 to-violet-300/20 text-primary text-lg border border-primary/10 backdrop-blur-sm"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            Powered by LendingClub
           </motion.span>
           
-          <motion.h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900" initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          delay: 0.2
-        }}>
+          <motion.h1 
+            className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
             Connect to {Company}
           </motion.h1>
           
-          <motion.p className="text-xl text-gray-600 max-w-xl mx-auto leading-relaxed" initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          delay: 0.4
-        }}>
+          <motion.p 
+            className="text-xl text-gray-600 max-w-xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
             Don't have your tax information laying around or have no idea how to get your hands on it? 
 
             Let us handle all that for you!
           </motion.p>
 
           {/* Security Badge */}
-          <motion.div className="flex items-center justify-center gap-2 text-sm text-gray-500 bg-white/30 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 w-fit mx-auto" initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          delay: 0.6
-        }}>
+          <motion.div 
+            className="flex items-center justify-center gap-2 text-sm text-gray-500 bg-white/30 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 w-fit mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+          >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
             <span>Enterprise-Level Security & Encryption</span>
           </motion.div>
 
-          <motion.div whileHover={{
-          scale: 1.02
-        }} whileTap={{
-          scale: 0.98
-        }} className="inline-block">
-            <button className="px-8 bg-gradient-to-r from-primary via-violet-500 to-purple-600 text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 border border-white/20 py-[16px]">Connect Your Account</button>
+          <motion.div 
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-block"
+          >
+            <button className="px-8 py-4 bg-gradient-to-r from-primary via-violet-500 to-purple-600 text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 border border-white/20">
+              Connect
+            </button>
           </motion.div>
 
           {/* Trusted By Section */}
-          <motion.div className="mt-16 pt-8 border-t border-gray-100" initial={{
-          opacity: 0
-        }} animate={{
-          opacity: 1
-        }} transition={{
-          delay: 0.8
-        }}>
+          <motion.div 
+            className="mt-16 pt-8 border-t border-gray-100"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+          >
             <p className="text-sm text-gray-500 mb-4">Trusted by 1,000s of Taxpayers</p>
             <div className="flex justify-center items-center gap-4">
               <svg className="w-48 h-12 text-gray-400/50" viewBox="0 0 200 50" fill="currentColor">
@@ -114,4 +110,5 @@ const Index = () => {
       </div>
     </div>;
 };
+
 export default Index;
