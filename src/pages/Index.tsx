@@ -44,7 +44,7 @@ const Index = () => {
           </motion.span>
           
           <motion.h1 
-            className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight bg-gradient-to-r from-primary to-violet-400 bg-clip-text text-transparent"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -53,7 +53,7 @@ const Index = () => {
           </motion.h1>
           
           <motion.p 
-            className="text-xl text-gray-600 max-w-xl mx-auto leading-relaxed bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-xl"
+            className="text-xl text-gray-600 max-w-xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
