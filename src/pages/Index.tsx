@@ -1,4 +1,6 @@
+
 import { motion } from "framer-motion";
+
 const FloatingShape = ({
   className
 }: {
@@ -11,7 +13,10 @@ const FloatingShape = ({
   repeat: Infinity,
   ease: "easeInOut"
 }} />;
+
 const Index = () => {
+  const Company = "TaxNow"; // Define the Company variable here
+  
   return <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-violet-50 via-purple-50 to-purple-50">
       {/* Floating Shapes */}
       <FloatingShape className="w-64 h-64 bg-primary/10 rounded-full -top-20 -left-20 blur-3xl" />
@@ -35,8 +40,8 @@ const Index = () => {
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 tracking-tight">Connect to {Company}</h1>
           
-          <p className="text-xl text-gray-600 max-w-xl mx-auto leading-relaxed">Don't have your tax information laying around or 
-have no idea how to get your hands on it? 
+          <p className="text-xl text-gray-600 max-w-xl mx-auto leading-relaxed">Don't have your tax information laying around or 
+have no idea how to get your hands on it? 
 
 
 Let us handle all that for you!
@@ -79,4 +84,5 @@ Let us handle all that for you!
       </div>
     </div>;
 };
+
 export default Index;
