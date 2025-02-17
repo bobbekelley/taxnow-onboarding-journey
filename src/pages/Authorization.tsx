@@ -24,9 +24,7 @@ const Authorization = () => {
       }} className="space-y-6 text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-800">Let's get the paperwork sorted!</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">Please sign and date the tax information authorization below. We have already pre-filled it with the information that ID.me provided for your convenience.</p>
-          <p className="text-sm text-gray-500">
-            You'll have an opportunity to save a copy before we wrap up.
-          </p>
+          <p className="text-sm text-gray-500">Don't worry you'll have an opportunity to save a copy before we wrap up.</p>
         </motion.div>
 
         <motion.div initial={{
