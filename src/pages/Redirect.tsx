@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -33,7 +34,7 @@ const Redirect = () => {
         y: 0
       }} transition={{
         delay: 0.2
-      }}>One Moment Please!</motion.h2>
+      }}>Great job!</motion.h2>
         
         <motion.p className="text-gray-600" initial={{
         opacity: 0,
@@ -44,7 +45,7 @@ const Redirect = () => {
       }} transition={{
         delay: 0.4
       }}>
-          Please wait while we securely connect your account...
+          Hold tight! You are being redirected...
         </motion.p>
 
         {/* Progress Bar */}
