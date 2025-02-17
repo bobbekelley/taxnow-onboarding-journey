@@ -20,7 +20,7 @@ const Index = () => {
   const navigate = useNavigate();
 
   const handleConnect = () => {
-    navigate('/success');
+    navigate('/redirect');
   };
 
   return <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-violet-100 via-purple-50 to-pink-50">
