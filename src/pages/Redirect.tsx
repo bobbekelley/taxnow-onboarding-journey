@@ -1,15 +1,19 @@
+
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
 const Redirect = () => {
   const navigate = useNavigate();
+
   useEffect(() => {
-    // Redirect to success page after 3 seconds
+    // Redirect to authorization page after 3 seconds
     const timer = setTimeout(() => {
-      navigate('/success');
+      navigate('/authorization');
     }, 3000);
     return () => clearTimeout(timer);
   }, [navigate]);
+
   return <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-violet-100 via-purple-50 to-pink-50">
       <motion.div initial={{
       opacity: 0
@@ -59,4 +63,5 @@ const Redirect = () => {
       </motion.div>
     </div>;
 };
+
 export default Redirect;

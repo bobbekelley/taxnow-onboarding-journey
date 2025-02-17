@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Redirect from "./pages/Redirect";
+import Authorization from "./pages/Authorization";
 import Success from "./pages/Success";
 import NotFound from "./pages/NotFound";
 
@@ -20,6 +21,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/redirect" element={<Redirect />} />
+          <Route path="/authorization" element={<Authorization />} />
           <Route path="/success" element={<Success />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
