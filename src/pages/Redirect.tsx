@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -33,7 +34,7 @@ const Redirect = () => {
         y: 0
       }} transition={{
         delay: 0.2
-      }}>Moving On!</motion.h2>
+      }}>Great job!</motion.h2>
         
         <motion.p className="text-gray-600" initial={{
         opacity: 0,
@@ -43,7 +44,9 @@ const Redirect = () => {
         y: 0
       }} transition={{
         delay: 0.4
-      }}>Hang tight! You are being redirected...</motion.p>
+      }}>
+          Hold tight! You are being redirected...
+        </motion.p>
 
         {/* Progress Bar */}
         <motion.div className="w-full max-w-xs mx-auto h-1 bg-gray-200 rounded-full overflow-hidden">
