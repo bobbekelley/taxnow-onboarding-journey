@@ -1,18 +1,33 @@
+
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
+
 const Authorization = () => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [agreed, setAgreed] = useState(false);
+  
+  const currentDate = new Date().toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (name && agreed) {
       navigate('/success');
     }
   };
+
+  const handleDownload = () => {
+    // In a real implementation, this would generate and download the filled form
+    alert("Form download functionality would be implemented here");
+  };
+
   return <div className="min-h-screen bg-gradient-to-br from-violet-100 via-purple-50 to-pink-50">
       <div className="container max-w-4xl mx-auto px-4 py-12">
         <motion.div initial={{
@@ -58,6 +73,19 @@ const Authorization = () => {
             <Input id="name" type="text" placeholder="Enter your full name" value={name} onChange={e => setName(e.target.value)} required className="w-full" />
           </div>
 
+          <div className="space-y-2">
+            <label htmlFor="date" className="block text-sm font-medium text-gray-700">
+              Date
+            </label>
+            <Input 
+              id="date" 
+              type="text" 
+              value={currentDate} 
+              readOnly
+              className="w-full bg-gray-50 cursor-not-allowed"
+            />
+          </div>
+
           <div className="flex items-start space-x-2">
             <Checkbox id="terms" checked={agreed} onCheckedChange={checked => setAgreed(checked as boolean)} className="mt-1" />
             <label htmlFor="terms" className="text-sm text-gray-600">
@@ -69,19 +97,49 @@ const Authorization = () => {
           </div>
 
           <div className="flex justify-between items-center pt-4">
-            <button type="button" onClick={() => navigate(-1)} className="text-gray-600 hover:text-gray-800 flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <button
+              type="button"
+              onClick={() => navigate(-1)}
+              className="text-gray-600 hover:text-gray-800 flex items-center gap-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
                 <path d="m15 18-6-6 6-6" />
               </svg>
               Back
             </button>
 
-            <button type="submit" disabled={!name || !agreed} className="px-6 py-2 bg-primary text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
-              Accept & Sign
-            </button>
+            <div className="flex gap-3">
+              <button
+                type="button"
+                onClick={handleDownload}
+                disabled={!name || !agreed}
+                className="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-gray-300 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Download Form
+              </button>
+
+              <button
+                type="submit"
+                disabled={!name || !agreed}
+                className="px-6 py-2 bg-primary text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Accept & Sign
+              </button>
+            </div>
           </div>
         </motion.form>
       </div>
     </div>;
 };
+
 export default Authorization;
