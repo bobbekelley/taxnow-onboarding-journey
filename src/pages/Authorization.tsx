@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
+
 const Authorization = () => {
   const navigate = useNavigate();
   const [name, setName] = useState("");
@@ -12,16 +13,19 @@ const Authorization = () => {
     month: 'long',
     day: 'numeric'
   });
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (name && agreed) {
       navigate('/success');
     }
   };
+
   const handleDownload = () => {
     // In a real implementation, this would generate and download the filled form
     alert("Form download functionality would be implemented here");
   };
+
   return <div className="min-h-screen bg-gradient-to-br from-violet-100 via-purple-50 to-pink-50">
       <div className="container max-w-4xl mx-auto px-4 py-12">
         <motion.div initial={{
@@ -116,4 +120,5 @@ const Authorization = () => {
       </div>
     </div>;
 };
+
 export default Authorization;
